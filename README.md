@@ -122,7 +122,15 @@ b- Aller au niveau du cmd de la question 3 puis inserrer ceci:
 
 constat: Il y a transfert de donnes(replication) du site 2 vers le site 1
 
-4- Depuis l’interface sqlline exécuter les requêtes suivantes:
+4- Redémarrer le noeud serveur sur le site1, puis exécuter de nouveau depuis l’interface de
+sqlline la requête suivante:
+SELECT * FROM City;
+Dire ce que vous constater.
+
+Apres redemarrage on constate que la table reussit toujours que la repliquation fonctionne.
+
+
+5- Depuis l’interface sqlline exécuter les requêtes suivantes:
 CREATE TABLE Person (id LONG, name VARCHAR, city_id LONG, PRIMARY KEY (id,
 city_id)) WITH "backups=1, affinityKey=city_id";
 INSERT INTO Person (id, name, city_id) VALUES (1, 'John Koffi', 3);
@@ -151,7 +159,7 @@ SELECT * FROM PERSON;
 +----+----------------+---------+
 
 
-5- Stopper le noeud client du site2 (CTRL+C) et exécuter la requête depuis l’interface de
+6- Stopper le noeud client du site2 (CTRL+C) et exécuter la requête depuis l’interface de
 sqlline:
 SELECT * FROM PERSON;
 Dire ce que vous constater.
