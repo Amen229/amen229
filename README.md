@@ -173,7 +173,12 @@ constat: la table a ete replique
 
 conclusion: il s'agit d'un systeme de base de donnes distribues.
 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Exercice 2:
+
+
 L'application présentée dans ce livrable sera codée en php.
 
 Une fois INGITE installe, on installera PHP Thin Client en tant que package Composer à l'aide de la commande ci-dessous :
